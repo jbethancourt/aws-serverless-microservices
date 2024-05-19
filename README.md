@@ -182,6 +182,7 @@ Create the DynamoDB table that the Lambda function uses.
 4. Choose Create.
 
 ![create DynamoDB table](./images/create-dynamo-table.jpg)
+![create DynamoDB table](./images/create-dynamo-table-button.jpg)
 
 
 ### Create API
