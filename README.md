@@ -99,7 +99,7 @@ To create an execution role
 
 ![Lambda basic information](./images/lambda-basic-info.jpg)
 
-4. Replace the boilerplate coding with the following code snippet and click "Save"
+4. Click "Code" under the "Function Overview" section, and replace the boilerplate coding with the following code snippet
 
 **Example Python Code**
 ```python
@@ -145,7 +145,8 @@ def lambda_handler(event, context):
 ### Test Lambda Function
 
 Let's test our newly created function. We haven't created DynamoDB and the API yet, so we'll do a sample echo operation. The function should output whatever input we pass.
-1. Click the arrow on "Select a test event" and click "Configure test events"
+
+1. Click "Test" option under the "Function Overview" section.
 
 ![Configure test events](./images/lambda-test-event-create.jpg)
 
