@@ -217,15 +217,14 @@ Click "Create Resource"
 ![Create resource method](./images/create-method-3.jpg)
 
 Our API-Lambda integration is done!
-![Create lambda integration](./images/create-lambda-integration.jpg)
 
 ### Deploy the API
 
 In this step, you deploy the API you created to a stage called prod.
 
-1. Click "Actions", and select "Deploy API"
+1. Click "Deploy API"
 
-![Deploy API](./images/deploy-api-1.jpg)
+![Create lambda integration](./images/deploy-api-1.jpg)
 
 2. Now it is going to ask you about a stage. Select "[New Stage]" for "Deployment stage". Give "Prod" as "Stage name". Click "Deploy"
 
