@@ -4,7 +4,7 @@
 
 Let's start with the High-Level Design.
 ![High Level Design](./images/high-level-design.jpg)
-An Amazon API Gateway is a collection of resources and methods. For this tutorial, you create one resource (DynamoDBManager) and define one method (POST) on it. The method is backed by a Lambda function (LambdaFunctionOverHttps). That is, when you call the API through an HTTPS endpoint, Amazon API Gateway invokes the Lambda function.
+An Amazon API Gateway is a collection of resources and methods. For this tutorial, you create one resource (DynamoDBManager) and define one method (POST). The method is backed by a Lambda function (LambdaFunctionOverHttps). That is when you call the API through an HTTPS endpoint, Amazon API Gateway invokes the Lambda function.
 
 The POST method on the DynamoDBManager resource supports the following DynamoDB operations:
 
@@ -13,7 +13,7 @@ The POST method on the DynamoDBManager resource supports the following DynamoDB 
 * Scan an item.
 * Other operations (echo, ping), not related to DynamoDB, that you can use for testing.
 
-The request payload you send in the POST request identifies the DynamoDB operation and provides the necessary data. For example:
+The request payload you send in the POST request is the DynamoDB operation and provides the necessary data. For example:
 
 The following is a sample request payload for a DynamoDB create item operation:
 
@@ -189,37 +189,33 @@ Create the DynamoDB table that the Lambda function uses.
 
 **To create the API**
 1. Go to API Gateway console
-2. Click Create API
-
-![create API](./images/create-api-button.jpg) 
-
-3. Scroll down and select "Build" for REST API
+2. Scroll down and select "Build" for REST API
 
 ![Build REST API](./images/build-rest-api.jpg) 
 
-4. Give the API name as "DynamoDBOperations", keep everything as is, click "Create API"
+3. Give the API name "DynamoDBOperations", keep everything as is, and click "Create API"
 
 ![Create REST API](./images/create-new-api.jpg)
 
-5. Each API is collection of resources and methods that are integrated with backend HTTP endpoints, Lambda functions, or other AWS services. Typically, API resources are organized in a resource tree according to the application logic. At this time you only have the root resource, but let's add a resource next 
+4. Each API is a collection of resources and methods integrated with backend HTTP endpoints, Lambda functions, or other AWS services. Typically, API resources are organized in a resource tree according to the application logic. At this time you only have the root resource, but let's add a resource next 
 
 Click "Actions", then click "Create Resource"
 
 ![Create API resource](./images/create-api-resource.jpg)
 
-6. Input "DynamoDBManager" in the Resource Name, Resource Path will get populated. Click "Create Resource"
+5. Input "DynamoDBManager" in the Resource Name, Resource Path will get populated. Click "Create Resource"
 
 ![Create resource](./images/create-resource-name.jpg)
 
-7. Let's create a POST Method for our API. With the "/dynamodbmanager" resource selected, Click "Actions" again and click "Create Method". 
+6. Let's create a POST Method for our API. With the "/dynamodbmanager" resource selected, Click "Actions" again and click "Create Method". 
 
 ![Create resource method](./images/create-method-1.jpg)
 
-8. Select "POST" from drop down , then click checkmark
+7. Select "POST" from the drop-down, then click the checkmark
 
 ![Create resource method](./images/create-method-2.jpg)
 
-9. The integration will come up automatically with "Lambda Function" option selected. Select "LambdaFunctionOverHttps" function that we created earlier. As you start typing the name, your function name will show up.Select and click "Save". A popup window will come up to add resource policy to the lambda to be invoked by this API. Click "Ok"
+8. The integration will come up automatically with "Lambda Function" option selected. Select "LambdaFunctionOverHttps" function that we created earlier. As you start typing the name, your function name will show up. Select and click "Save". A popup window will come up to add resource policy to the lambda to be invoked by this API. Click "OK"
 
 ![Create lambda integration](./images/create-lambda-integration.jpg)
 
@@ -227,9 +223,9 @@ Our API-Lambda integration is done!
 
 ### Deploy the API
 
-In this step, you deploy the API that you created to a stage called prod.
+In this step, you deploy the API you created to a stage called prod.
 
-1. Click "Actions", select "Deploy API"
+1. Click "Actions", and select "Deploy API"
 
 ![Deploy API](./images/deploy-api-1.jpg)
 
@@ -237,7 +233,7 @@ In this step, you deploy the API that you created to a stage called prod.
 
 ![Deploy API to Prod Stage](./images/deploy-api-2.jpg)
 
-3. We're all set to run our solution! To invoke our API endpoint, we need the endpoint url. In the "Stages" screen, expand the stage "Prod", select "POST" method, and copy the "Invoke URL" from screen
+3. We're all set to run our solution! To invoke our API endpoint, we need the endpoint URL. In the "Stages" screen, expand the stage "Prod", select "POST" method, and copy the "Invoke URL" from the screen
 
 ![Copy Invoke Url](./images/copy-invoke-url.jpg)
 
@@ -258,16 +254,16 @@ In this step, you deploy the API that you created to a stage called prod.
     }
 }
 ```
-2. To execute our API from local machine, we are going to use Postman and Curl command. You can choose either method based on your convenience and familiarity. 
-    * To run this from Postman, select "POST" , paste the API invoke url. Then under "Body" select "raw" and paste the above JSON. Click "Send". API should execute and return "HTTPStatusCode" 200.
+2. To execute our API from the local machine, we are going to use Postman and Curl commands. You can choose either method based on your convenience and familiarity. 
+    * To run this from Postman, select "POST", and paste the API invoke url. Then under "Body" select "raw" and paste the above JSON. Click "Send". API should execute and return "HTTPStatusCode" 200.
 
     ![Execute from Postman](./images/create-from-postman.jpg)
 
-    * To run this from terminal using Curl, run the below
+    * To run this from the terminal using Curl, run the below
     ```
     $ curl -X POST -d "{\"operation\":\"create\",\"tableName\":\"lambda-apigateway\",\"payload\":{\"Item\":{\"id\":\"1\",\"name\":\"Bob\"}}}" https://$API.execute-api.$REGION.amazonaws.com/prod/DynamoDBManager
     ```   
-3. To validate that the item is indeed inserted into DynamoDB table, go to Dynamo console, select "lambda-apigateway" table, select "Items" tab, and the newly inserted item should be displayed.
+3. To validate that the item is indeed inserted into the DynamoDB table, go to the Dynamo console, select "lambda-apigateway" table, select "Items" tab and the newly inserted item should be displayed.
 
 ![Dynamo Item](./images/dynamo-item.jpg)
 
@@ -292,7 +288,7 @@ Let's clean up the resources we have created for this lab.
 
 ### Cleaning up DynamoDB
 
-To delete the table, from DynamoDB console, select the table "lambda-apigateway", and click "Delete table"
+To delete the table, from the DynamoDB console, select the table "lambda-apigateway", and click "Delete table"
 
 ![Delete Dynamo](./images/delete-dynamo.jpg)
 
@@ -300,6 +296,6 @@ To delete the Lambda, from the Lambda console, select lambda "LambdaFunctionOver
 
 ![Delete Lambda](./images/delete-lambda.jpg)
 
-To delete the API we created, in API gateway console, under APIs, select "DynamoDBOperations" API, click "Actions", then "Delete"
+To delete the API we created, in the API gateway console, under APIs, select "DynamoDBOperations" API, click "Actions", then "Delete"
 
 ![Delete API](./images/delete-api.jpg)
