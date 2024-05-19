@@ -216,11 +216,8 @@ Click "Create Resource"
 ![Create resource method](./images/create-method-2.jpg)
 ![Create resource method](./images/create-method-3.jpg)
 
-8. The integration will come up automatically with "Lambda Function" option selected. Select "LambdaFunctionOverHttps" function that we created earlier. As you start typing the name, your function name will show up. Select and click "Save". A popup window will come up to add resource policy to the lambda to be invoked by this API. Click "OK"
-
-![Create lambda integration](./images/create-lambda-integration.jpg)
-
 Our API-Lambda integration is done!
+![Create lambda integration](./images/create-lambda-integration.jpg)
 
 ### Deploy the API
 
