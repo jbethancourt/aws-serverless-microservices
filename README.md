@@ -93,7 +93,7 @@ To create an execution role
 
 ![Create function](./images/create-lambda.jpg)
 
-2. Select "Author from scratch". Use name **LambdaFunctionOverHttps** , select **Python 3.7** as Runtime. Under Permissions, select "Use an existing role", and select **lambda-apigateway-role** that we created, from the drop down
+2. Select "Author from scratch". Use the name **LambdaFunctionOverHttps**, and select **Python 3.7** as Runtime. Under Permissions, select "Use an existing role", and select **lambda-apigateway-role** that we created, from the drop-down
 
 3. Click "Create function"
 
@@ -146,11 +146,11 @@ def lambda_handler(event, context):
 
 Let's test our newly created function. We haven't created DynamoDB and the API yet, so we'll do a sample echo operation. The function should output whatever input we pass.
 
-1. Click "Test" option under the "Function Overview" section.
+1. Click the "Test" option under the "Function Overview" section.
 
 ![Configure test events](./images/lambda-test-event-create.jpg)
 
-2. Paste the following JSON into the event. The field "operation" dictates what the lambda function will perform. In this case, it'd simply return the payload from input event as output. Click "Create" to save
+2. Paste the following JSON into the event. The field "operation" dictates what the lambda function will perform. In this case, it'd simply return the payload from the input event as output. Click "Save" to save
 ```json
 {
     "operation": "echo",
