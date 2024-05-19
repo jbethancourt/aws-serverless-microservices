@@ -162,11 +162,11 @@ Let's test our newly created function. We haven't created DynamoDB and the API y
 ```
 ![Save test event](./images/save-test-event.jpg)
 
-3. Click "Deploy", and it will deploy the lambdba function. The deploy button should turn gray
+3. Click "Deploy", and it will deploy the lambda function. The deploy button should turn gray.
 
 ![Save test event](./images/lambda-deploy-api.jpg)
 
-4. Click "Test", and it will execute the test event. You should see the output in the console
+4. Click "Test", and it will execute the test event. You should see the output in the console.
 
 ![Execute test event](./images/execute-test.jpg)
 
