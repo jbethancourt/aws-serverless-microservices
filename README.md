@@ -1,8 +1,8 @@
 # LevelUp! Lab for Serverless
 
-## Lab Overview And High Level Design
+## Lab Overview And High-Level Design
 
-Let's start with the High Level Design.
+Let's start with the High-Level Design.
 ![High Level Design](./images/high-level-design.jpg)
 An Amazon API Gateway is a collection of resources and methods. For this tutorial, you create one resource (DynamoDBManager) and define one method (POST) on it. The method is backed by a Lambda function (LambdaFunctionOverHttps). That is, when you call the API through an HTTPS endpoint, Amazon API Gateway invokes the Lambda function.
 
@@ -13,7 +13,7 @@ The POST method on the DynamoDBManager resource supports the following DynamoDB 
 * Scan an item.
 * Other operations (echo, ping), not related to DynamoDB, that you can use for testing.
 
-The request payload you send in the POST request identifies the DynamoDB operation and provides necessary data. For example:
+The request payload you send in the POST request identifies the DynamoDB operation and provides the necessary data. For example:
 
 The following is a sample request payload for a DynamoDB create item operation:
 
@@ -150,7 +150,7 @@ Let's test our newly created function. We haven't created DynamoDB and the API y
 
 ![Configure test events](./images/lambda-test-event-create.jpg)
 
-2. Paste the following JSON into the event. The field "operation" dictates what the lambda function will perform. In this case, it'd simply return the payload from the input event as output. Click "Save" to save
+2. Paste the following JSON into the event. The field "operation" dictates what the lambda function will perform. In this case, it'd simply return the payload from the input event as output. Click "Save"
 ```json
 {
     "operation": "echo",
@@ -166,7 +166,7 @@ Let's test our newly created function. We haven't created DynamoDB and the API y
 
 ![Execute test event](./images/execute-test.jpg)
 
-We're all set to create DynamoDB table and an API using our lambda as backend!
+We're all set to create DynamoDB table and an API using our lambda as a backend!
 
 ### Create DynamoDB Table
 
