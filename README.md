@@ -179,7 +179,7 @@ Create the DynamoDB table that the Lambda function uses.
 3. Create a table with the following settings.
    * Table name – lambda-apigateway
    * Primary key – id (string)
-4. Choose Create.
+4. Choose Create table
 
 ![create DynamoDB table](./images/create-dynamo-table.jpg)
 ![create DynamoDB table](./images/create-dynamo-table-button.jpg)
