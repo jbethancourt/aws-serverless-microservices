@@ -211,7 +211,7 @@ Click "Create Resource"
 
 ![Create resource method](./images/create-method-1.jpg)
 
-7. Select "POST" from the drop-down. Select "Lambda function" from the "Integration type" section. Select "LambdaFunctionOverHttps" function that we created earlier. Scroll down and click "Create method".
+7. Select "POST" from the drop-down. Select "Lambda function" from the "Integration type" section. Select "LambdaFunctionOverHttps" function that we created earlier from the "Lambda function" section. Scroll down and click "Create method".
 
 ![Create resource method](./images/create-method-2.jpg)
 ![Create resource method](./images/create-method-3.jpg)
