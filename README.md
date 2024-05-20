@@ -74,11 +74,9 @@ Create a role with the following properties.
 
 ![Create function](./images/create-inline-policy-lambda-role.jpg)
 
-7. Create a new inline policy for the new role. Click "Create inline policy"
+7. Select the "JSON" button. Copy and paste the JSON posted below, into the Policy editor. Click "Next"
 
 ![Create function](./images/specify-inline-policy-permissions-lambda-role.jpg)
-
-8. Select the "JSON" button. Copy and paste the JSON posted below, into the Policy editor. Click "Next"
 
 ```json
 {
@@ -110,7 +108,7 @@ Create a role with the following properties.
 ]
 }
 ```
-9. Type "DynamoDB_CloudWatch_Logs" inside the Policy Name textbox. Click "Create Policy"
+8. Type "DynamoDB_CloudWatch_Logs" inside the Policy Name textbox. Click "Create Policy"
 
 ![Create function](./images/create-inline-policy-permissions-lambda-role.jpg)
 
