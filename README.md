@@ -58,22 +58,11 @@ To create an execution role
 
 ![Create function](./images/create-lambda-role.jpg)
 
-
 ...json
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "Statement1",
-            "Effect": "Allow",
-            "Principal": {
-                "Service": "lambda.amazonaws.com"
-            },
-            "Action": "sts:AssumeRole"
-        }
-    ]
 }
 ...
+
 ```json
 {
 "Version": "2012-10-17",
