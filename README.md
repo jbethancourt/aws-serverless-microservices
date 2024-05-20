@@ -80,32 +80,31 @@ Create a role with the following properties.
 
 ```json
 {
-        "Version": "2012-10-17",
-        "Statement": [
-        {
-          "Sid": "Stmt1428341300017",
-          "Action": [
-            "dynamodb:DeleteItem",
-            "dynamodb:GetItem",
-            "dynamodb:PutItem",
-            "dynamodb:Query",
-            "dynamodb:Scan",
-            "dynamodb:UpdateItem"
-          ],
-          "Effect": "Allow",
-          "Resource": "*"
-        },
-        {
-          "Sid": "",
-          "Resource": "*",
-          "Action": [
-            "logs:CreateLogGroup",
-            "logs:CreateLogStream",
-            "logs:PutLogEvents"
-          ],
-          "Effect": "Allow"
-        }
-    ]
+    "Version": "2012-10-17",
+    "Statement": [
+    {
+      "Sid": "Stmt1428341300017",
+      "Action": [
+        "dynamodb:DeleteItem",
+        "dynamodb:GetItem",
+        "dynamodb:PutItem",
+        "dynamodb:Query",
+        "dynamodb:Scan",
+        "dynamodb:UpdateItem"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    },
+    {
+      "Sid": "",
+      "Resource": "*",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Effect": "Allow"
+    }]
 }
 ```
 8. Type "DynamoDB_CloudWatch_Logs" inside the Policy Name textbox. Click "Create Policy"
