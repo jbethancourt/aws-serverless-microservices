@@ -74,7 +74,7 @@ Create a role with the following properties.
 
 ![Create function](./images/create-inline-policy-lambda-role.jpg)
 
-7. create a new inline policy for the new role. Click "Create inline policy"
+7. Create a new inline policy for the new role. Click "Create inline policy"
 
 ![Create function](./images/specify-inline-policy-permissions-lambda-role.jpg)
 
