@@ -340,7 +340,7 @@ Let's clean up the resources we have created for this lab.
 
 ### Cleaning up DynamoDB
 
-To delete the table, from the DynamoDB console, select the table "lambda-apigateway", and click "Delete table"
+To delete the table, from the DynamoDB console, select the table "lambda-apigateway", and click "Delete"
 
 ![Delete Dynamo](./images/delete-dynamo.jpg)
 
