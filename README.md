@@ -62,6 +62,12 @@ To create an execution role
 
 ![Create function](./images/create-lambda-role-1.jpg)
 
+![Create function](./images/create-inline-policy-lambda-role.jpg)
+
+![Create function](./images/specify-inline-policy-permissions-lambda-role.jpg)
+
+![Create function](./images/create-inline-policy-permissions-lambda-role.jpg)
+
 ```json
 {
     "Version": "2012-10-17",
