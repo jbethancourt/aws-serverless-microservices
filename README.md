@@ -280,6 +280,57 @@ In this step, you deploy the API you created to a stage called prod.
 ```
 ![List Dynamo Items](./images/dynamo-item-list.jpg)
 
+5. To get specific inserted items from the table, we can use the "read" operation of Lambda using the same API. Pass the following JSON to the API, and it will return all the items from the Dynamo table
+
+```json
+{
+    "operation": "read",
+    "tableName": "lambda-apigateway",
+    "payload": {
+        "Key": {
+            "id": "4321ABCD"
+        }
+    }
+}
+```
+![List Dynamo Items](./images/dynamo-item-list.jpg)
+
+6. To update specific inserted items from the table, we can use the "update" operation of Lambda using the same API. Pass the following JSON to the API, and it will return all the items from the Dynamo table
+
+```json
+{
+    "operation": "update",
+    "tableName": "lambda-apigateway",
+    "payload": {    
+        "Key" : {"id": "1234ABCD"},
+        "UpdateExpression" : "set #number = :n",
+        "ExpressionAttributeNames" : {
+            "#number": "number"
+        },
+        "ExpressionAttributeValues" : {
+            ":n": 20
+        },
+        "ReturnValues" : "UPDATED_NEW"
+    }
+}
+```
+![List Dynamo Items](./images/dynamo-item-list.jpg)
+
+6. To delete specific inserted items from the table, we can use the "delete" operation of Lambda using the same API. Pass the following JSON to the API, and it will return all the items from the Dynamo table
+
+```json
+{
+    "operation": "delete",
+    "tableName": "lambda-apigateway",
+    "payload": {
+        "Key": {
+            "id": "4321ABCD"
+        }
+    }
+}
+```
+![List Dynamo Items](./images/dynamo-item-list.jpg)
+
 We have successfully created a serverless API using API Gateway, Lambda, and DynamoDB!
 
 ## Cleanup
