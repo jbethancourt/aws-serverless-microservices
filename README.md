@@ -57,6 +57,9 @@ To create an execution role
     * Permissions – Custom policy with permission to DynamoDB and CloudWatch Logs. This custom policy has the permissions that  the function needs to write data to DynamoDB and upload logs.
 
 ![Create function](./images/create-lambda-role.jpg)
+
+![Create function](./images/select-lambda-trust-entity.jpg)
+
 ```json
 {
     "Version": "2012-10-17",
