@@ -60,6 +60,8 @@ To create an execution role
 
 ![Create function](./images/select-lambda-trust-entity.jpg)
 
+![Create function](./images/create-lambda-role-1.jpg)
+
 ```json
 {
     "Version": "2012-10-17",
