@@ -51,37 +51,34 @@ To create an execution role
 
 1. Open the roles page in the IAM console.
 2. Choose Create role.
-3. Create a role with the following properties.
+
+**Note:**
+Create a role with the following properties.
     * Trusted entity – Lambda.
     * Role name – **lambda-apigateway-role**.
     * Permissions – Custom policy with permission to DynamoDB and CloudWatch Logs. This custom policy has the permissions that  the function needs to write data to DynamoDB and upload logs.
 
+3. Click "Create Role" in the AWS IAM Console
+
 ![Create function](./images/create-lambda-role.jpg)
+
+4. Select Lambda as "Trusted entity", then Click "Next"
 
 ![Create function](./images/select-lambda-trust-entity.jpg)
 
+5. Click "Create role"
+
 ![Create function](./images/create-lambda-role-1.jpg)
+
+6. create a new inline policy for the new role. Click "Create inline policy"
 
 ![Create function](./images/create-inline-policy-lambda-role.jpg)
 
+7. create a new inline policy for the new role. Click "Create inline policy"
+
 ![Create function](./images/specify-inline-policy-permissions-lambda-role.jpg)
 
-![Create function](./images/create-inline-policy-permissions-lambda-role.jpg)
-
-```json
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Principal": {
-                "Service": "lambda.amazonaws.com"
-            },
-            "Action": "sts:AssumeRole"
-        }
-    ]
-}
-```
+8. Select the "JSON" button. Copy and paste the JSON posted below, into the Policy editor. Click "Next"
 
 ```json
 {
@@ -113,11 +110,16 @@ To create an execution role
 ]
 }
 ```
+9. Type "DynamoDB_CloudWatch_Logs" inside the Policy Name textbox. Click "Create Policy"
+
+![Create function](./images/create-inline-policy-permissions-lambda-role.jpg)
+
+
 
 ### Create Lambda Function
 
 **To create the function**
-1. Click "Create function" in AWS Lambda Console
+1. Click "Create function" in the AWS Lambda Console
 
 ![Create function](./images/create-lambda.jpg)
 
