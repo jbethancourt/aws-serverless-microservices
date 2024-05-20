@@ -348,6 +348,6 @@ To delete the Lambda, from the Lambda console, select lambda "LambdaFunctionOver
 
 ![Delete Lambda](./images/delete-lambda.jpg)
 
-To delete the API we created, in the API gateway console, under APIs, select "DynamoDBOperations" API, click "Actions", then "Delete"
+To delete the API we created, in the API gateway console, under APIs, select "DynamoDBOperations" API, click "Delete"
 
 ![Delete API](./images/delete-api.jpg)
