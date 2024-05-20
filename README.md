@@ -72,7 +72,7 @@ To create an execution role
             }
         ]
     }
-    ---
+    ...
     
     ```json
     {
