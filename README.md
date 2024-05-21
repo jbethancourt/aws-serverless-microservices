@@ -60,23 +60,23 @@ Create a role with the following properties.
 
 3. Click "Create Role" in the AWS IAM Console
 
-![Create function](./images/create-lambda-role.jpg)
+![Create role](./images/create-lambda-role.jpg)
 
 4. Select Lambda as "Trusted entity", then Click "Next"
 
-![Create function](./images/select-lambda-trust-entity.jpg)
+![Create role](./images/select-lambda-trust-entity.jpg)
 
 5. Click "Create role"
 
-![Create function](./images/create-lambda-role-1.jpg)
+![Create role](./images/create-lambda-role-1.jpg)
 
 6. Create a new inline policy for the new role. Click "Create inline policy"
 
-![Create function](./images/create-inline-policy-lambda-role.jpg)
+![Create role](./images/create-inline-policy-lambda-role.jpg)
 
 7. Select the "JSON" button. Copy and paste the JSON posted below, into the Policy editor. Click "Next"
 
-![Create function](./images/specify-inline-policy-permissions-lambda-role.jpg)
+![Create role](./images/specify-inline-policy-permissions-lambda-role.jpg)
 
 ```json
 {
